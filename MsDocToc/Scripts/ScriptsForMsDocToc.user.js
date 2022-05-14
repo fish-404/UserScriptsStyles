@@ -5,8 +5,8 @@
 // @description  Sticky Microsoft Documents right sidebar TOC block
 // @description:zh 固定微软文档右侧的目录栏
 // @author       fish-404
-// @updateURL    https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/MsDocToc/ScriptsForMsDocToc.meta.js
-// @downloadURL  https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/MsDocToc/ScriptsForMsDocToc.user.js
+// @updateURL    https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/MsDocToc/Scripts/ScriptsForMsDocToc.meta.js
+// @downloadURL  https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/MsDocToc/Scripts/ScriptsForMsDocToc.user.js
 // @match        *://docs.microsoft.com/*
 // @grant        none
 // ==/UserScript==
