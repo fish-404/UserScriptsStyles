@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ScriptsForMsDocToc
 // @namespace    mailto:fish404hsif@gmail.com
-// @version      0.4.0
+// @version      0.5.0
 // @description  Sticky Microsoft Documents right sidebar TOC block
 // @description:zh 固定微软文档右侧的目录栏
 // @author       fish-404
@@ -14,9 +14,10 @@
 (function() {
     'use strict';
     try { 
-      document.getElementById("affixed-right-container").setAttribute("style", "position: sticky; top: 3vh");
-      document.getElementById("right-rail-in-this-article-list").setAttribute("style", "overflow: auto; max-height: 70vh;");
-      document.querySelector("button[data-bi-name='show-more-btn']").click();
+        document.getElementById("affixed-right-container").setAttribute("style", "position: sticky; top: 3vh");
+        document.getElementById("right-rail-in-this-article-list").setAttribute("style", "overflow: auto; max-height: 70vh;");
+        document.querySelector("button[data-bi-name='show-more-btn']").click();
+        document.querySelector('#right-rail-in-this-article-list .is-expanded a').setAttribute("style", "outline: 0"); // remove dash border
     }
     catch {} // not all page has right sidebar TOC block
 })();
