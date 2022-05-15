@@ -1,9 +1,9 @@
 @-moz-document domain("douban.com") {
-    .comments-app-wrapper textarea {
-        resize: vertical;
-    }
-    
-    .comment-wrapper textarea {
+    /* 笔记的回复 豆列的回复 小组的回复 豆列的描述编辑 */
+    .comments-app-wrapper textarea
+    , .txd textarea
+    , .comment-warapper textarea
+    , .basic-textarea { 
         resize: vertical;
     }
 }
