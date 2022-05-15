@@ -1,10 +1,6 @@
 @-moz-document domain("douban.com") {
     /* Insert code here... */
-    .comments-app-wrapper textarea {
-        resize: vertical;
-    }
-    
-    .comment-wrapper textarea {
+    textarea {
         resize: vertical;
     }
 }
