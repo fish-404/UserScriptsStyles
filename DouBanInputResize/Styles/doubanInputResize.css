@@ -1,8 +1,10 @@
 @-moz-document domain("douban.com") {
+    /* 发现豆瓣的textarea使用的样式太多了... 或许直接使用 textarea tag 作为选择器更好？ */
     .comments-app-wrapper textarea /* 笔记的回复 */
     , .txd textarea /* 豆列的回复 */
     , .comment-warapper textarea /* 小组的回复 */
     , .basic-textarea /* 豆列的描述 */ 
+    , .textarea_basic /* 豆瓣书籍 音乐的信息编辑框 */
     { 
         resize: vertical;
     }
