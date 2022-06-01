@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           git-scm.com 
+@namespace      mailto: fish404hsif@gmail.com
+@version        0.1.0
+@description    Sticky Git documentation top bar
+@author         fish-404
+==/UserStyle== */
+
+@-moz-document domain("git-scm.com") {
+    #reference-version, #book-chapters {
+       position: sticky;
+       top: 0;
+       background-color: rgb(223,221,213) 
+    }
+}
