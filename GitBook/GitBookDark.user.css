@@ -1,0 +1,41 @@
+@-moz-document domain("gitbook.io") {
+    /* Insert code here... */
+    
+    /* Left Sidebar */
+    .r-1vckr1u
+    , .r-1vckr1u /* Code */
+    {
+        background-color: #161823;
+    }
+    
+    /* Left Sidebar Header Text */
+    [data-rnw-int-class="nearest_249__265-1767_"] {
+        color: whitesmoke;
+    } 
+    
+    /* Lef Sidebar grident */
+    .r-10ptun7 {
+        background-image: none !important;
+    }
+    
+    /* Content and Right sidebar */
+    .r-14lw9ot {
+        background-color: #283142;
+    }
+    
+    /* Content Text */
+    .r-1nf4jbm {
+        color: whitesmoke;
+    }
+    
+    /* Quote right | both sidebar text | search ico | inline code */
+    .r-1bnj018 {
+        color: rgb(125, 162, 211);
+    }
+    
+    /* Code block hightlight */
+    .r-y7gyvo {
+        color: #eaff00;
+    }
+    
+}
