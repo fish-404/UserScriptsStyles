@@ -1,6 +1,13 @@
+/* ==UserStyle==
+@name           gitbook.io - 7/16/2022, 10:02:57 AM
+@namespace      mailto: fish404hsif@gmail.com
+@version        0.2.0
+@description    Dark Git book
+@license        MIT
+@updateURL      https://raw.githubusercontent.com/fish-404/UserScriptsStyles/GitBook/GitBookDark.user.css
+==/UserStyle== */
+
 @-moz-document domain("gitbook.io") {
-    /* Insert code here... */
-    
     /* Left Sidebar */
     .r-1vckr1u
     , .r-1vckr1u /* Code */
@@ -13,9 +20,14 @@
         color: whitesmoke;
     } 
     
-    /* Lef Sidebar grident */
+    /* Left Sidebar grident */
     .r-10ptun7 {
         background-image: none !important;
+    }
+    
+    /* Left sidebar gitbook icon */
+    .r-1b00too {
+        background-color: black;
     }
     
     /* Content and Right sidebar */
@@ -28,14 +40,40 @@
         color: whitesmoke;
     }
     
-    /* Quote right | both sidebar text | search ico | inline code */
-    .r-1bnj018 {
+    /* Quote | both sidebar text | search ico | inline code */
+    .r-1bnj018
+    {
         color: rgb(125, 162, 211);
     }
     
     /* Code block hightlight */
-    .r-y7gyvo {
+    .r-y7gyvo
+    , .r-vq47rg
+    , .r-11faab8
+    , .r-qtrn9a
+    , .r-1ghhsy9 /* Left siderbar active text */
+    , body:not(.dragging) [data-rnw-int-class="nearest____"]:focus [data-rnw-int-class="nearest___265-1767_"] /* right siderbar focus */
+    , .r-8j6ftb
+    {
         color: #eaff00;
     }
     
+    .r-123mryc {
+        color: orange
+    }
+    
+    /* right sider bar active left border */
+    .r-hqnlqz 
+    , .r-11tfr12
+    {
+        border-left-color: lightgreen;
+    }
+    
+    /* Link */
+    body:not(.dragging) [data-rnw-int-class="link____"]:hover [data-rnw-int-class="nearest_265-1767_267-1768-243__"]
+    , [data-rnw-int-class="nearest_265-1767_267-1768-243__"]
+    , body:not(.dragging) [data-rnw-int-class="nearest____"]:hover [data-rnw-int-class="nearest___265-1767_"]
+    {
+        color: lightgreen;     
+    }    
 }
