@@ -4,8 +4,24 @@
     , .txd textarea /* 豆列的回复 */
     , .comment-warapper textarea /* 小组的回复 */
     , .basic-textarea /* 豆列的描述 */ 
+    , .comment /* 书影音短评 */
     , .textarea_basic /* 豆瓣书籍 音乐的信息编辑框 */
     { 
         resize: vertical;
+    }
+    
+    /* 隐藏书影音短评弹出框阴影 */
+    #overlay {
+        display: none;
+    }
+    
+    /* 书影音短评弹出框上移 */
+    #dialog {
+        top: 37% !important;
+    }
+    
+    /* 书影音短评弹出框短评区域高度调整 按350字高度调整 */
+    #dialog textarea {
+        height: 178px;
     }
 }
