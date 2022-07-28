@@ -77,3 +77,42 @@
         color: lightgreen;     
     }    
 }
+
+
+@-moz-document domain("gitbooks.io") {    
+    .book-summary 
+    , .markdown-section code
+    , .gl-wrapper
+    , .markdown-section pre
+    {
+        background-color: #161823;
+        color: whitesmoke !important;
+    }
+    
+    .book-body 
+    , .gl-wrapper .gitbook-link 
+    , #book-search-input
+    {
+        background-color: #283142;
+    }
+    
+    .markdown-section
+    , .book-summary ul.summary li a
+    , .book-summary ul.summary li span 
+    {
+        color: whitesmoke;
+    }
+    
+    .gl-wrapper::before {
+        display: none;
+    }
+    
+    .book-summary ul.summary li.active > a 
+    {
+        color: yellow;
+    }
+    
+    .markdown-section a {
+        color: yellow;
+    }
+}
