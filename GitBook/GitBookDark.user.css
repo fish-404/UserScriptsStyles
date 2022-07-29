@@ -78,8 +78,7 @@
     }    
 }
 
-
-@-moz-document domain("gitbooks.io") {    
+@-moz-document domain("gitbooks.io") {  
     .book-summary 
     , .markdown-section code
     , .gl-wrapper
@@ -99,8 +98,12 @@
     .markdown-section
     , .book-summary ul.summary li a
     , .book-summary ul.summary li span 
+    , search-results-title
+    , .book-body
+    , #book-search-results .search-results .has-results .search-results-item
+    , .book-header
     {
-        color: whitesmoke;
+        color: whitesmoke !important;
     }
     
     .gl-wrapper::before {
@@ -108,11 +111,10 @@
     }
     
     .book-summary ul.summary li.active > a 
-    {
-        color: yellow;
-    }
+    , .markdown-section a 
+    , #book-search-results .search-results .has-results .search-results-item a
     
-    .markdown-section a {
+    {
         color: yellow;
     }
 }
