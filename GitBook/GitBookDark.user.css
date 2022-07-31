@@ -67,13 +67,16 @@
     .r-hqnlqz 
     , .r-11tfr12
     {
-        border-left-color: lightgreen;
+        border-left-color: #eaff00;
     }
     
     /* Link */
-    body:not(.dragging) [data-rnw-int-class="link____"]:hover [data-rnw-int-class="nearest_265-1767_267-1768-243__"]
-    , [data-rnw-int-class="nearest_265-1767_267-1768-243__"]
-    , body:not(.dragging) [data-rnw-int-class="nearest____"]:hover [data-rnw-int-class="nearest___265-1767_"]
+    body:not(.dragging) [data-rnw-int-class="link____"]:hover [data-rnw-int-class="nearest_*"]
+    , [data-rnw-int-class="nearest_*"]
+    , body:not(.dragging) [data-rnw-int-class="nearest____"]:hover [data-rnw-int-class="nearest___*"]
+    , body:not(.dragging) [data-rnw-int-class="link____"]:hover [data-rnw-int-class="nearest_265-1758_267-1759-243__"]
+    , [data-rnw-int-class="nearest_265-1758_267-1759-243__"]
+    , [data-rnw-int-class="nearest_249__265-1758_"]
     {
         color: lightgreen;     
     }    
