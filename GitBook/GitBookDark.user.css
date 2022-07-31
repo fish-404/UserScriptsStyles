@@ -116,6 +116,6 @@
     , #book-search-results .search-results .has-results .search-results-item a
     
     {
-        color: yellow;
+        color: yellow !important;
     }
 }
