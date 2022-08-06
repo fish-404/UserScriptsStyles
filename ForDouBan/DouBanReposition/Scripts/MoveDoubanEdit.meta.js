@@ -14,25 +14,3 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=douban.com
 // @grant        none
 // ==/UserScript==
-
-(function () {
-    'use strict';
-    let url = window.location.href;
-    let attributes = "position: sticky; top: 0; background: white;"
-    if (url.includes("note")) { // 日记
-        document.getElementsByClassName("note")[0]
-            .insertAdjacentElement(
-                'beforebegin'
-                , document.getElementsByClassName("note-footer-stat")[0]
-            );
-        document.getElementsByClassName("note-footer-stat")[0].setAttribute("style", attributes);
-    }
-    else {
-        document.getElementsByClassName("main-bd")[0]
-            .insertAdjacentElement(
-                'beforebegin'
-                , document.getElementsByClassName("main-author")[0]
-            );
-        document.getElementsByClassName("main-author")[0].setAttribute("style", attributes);
-    }
-})();
