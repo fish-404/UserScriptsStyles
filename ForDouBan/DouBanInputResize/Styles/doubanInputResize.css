@@ -4,7 +4,7 @@
     , .txd textarea /* 豆列的回复 */
     , .comment-warapper textarea /* 小组的回复 */
     , .basic-textarea /* 豆列的描述 */ 
-    , .comment /* 书影音短评 */
+    , text.comment /* 书影音短评 */
     , .textarea_basic /* 豆瓣书籍 音乐的信息编辑框 */
     { 
         resize: vertical;
