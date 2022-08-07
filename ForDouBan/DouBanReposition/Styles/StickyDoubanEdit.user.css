@@ -1,0 +1,19 @@
+/* ==UserStyle==
+@name           StickyDoubanEdit
+@namespace      mailto: fish404hsif@gmail.com
+@version        0.1.0
+@description    Sticky douban edit
+@author         fish-404
+@license        MIT
+==/UserStyle== */
+@-moz-document regexp(".*douban\\.com\\/review\\/.*")
+    , regexp(".*douban\\.com\\/note\\/.*") 
+    {
+    .note-ft
+    , .main-author {
+        position: sticky;
+        bottom: 0;
+        background: white;
+    }
+        
+}
