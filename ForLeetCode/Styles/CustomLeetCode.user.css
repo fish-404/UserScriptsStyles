@@ -1,0 +1,9 @@
+@-moz-document url-prefix("https://leetcode.cn/problemset/all/") {
+    a[aria-label="ad"] {
+        display: none;
+    }
+    
+    .-mr-m2, .md\:mr-0 {
+        display: none;
+    }
+}
