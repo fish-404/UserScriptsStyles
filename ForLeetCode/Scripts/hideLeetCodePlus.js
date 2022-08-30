@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         hideLeetCodePlus
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.1
+// @version      0.2
 // @description  Hide Leetcode Plus Problems
 // @author       fish-404
 // @match        https://leetcode.cn/problemset/*
@@ -11,14 +11,6 @@
 
 (function() {
     'use strict';
-
-    function hidePlusProblems() {
-        let plusProblems = document.querySelectorAll("div[role='rowgroup'] .text-brand-orange");
-        for (let i = 0; i < plusProblems.length; i++) {
-            plusProblems[i].parentElement.parentElement.style.display = "none";
-        }
-        console.log(`Hide ${plusProblems.length} problems`);
-    }
 
     const problemsNode = document.querySelector("div[role='table']");
 
@@ -30,3 +22,20 @@
     const observer = new MutationObserver(hidePlusProblems);
     observer.observe(problemsNode, config);
 })();
+
+function hidePlusProblems(mutationList) {
+    let preTargetRow;
+    mutationList.forEach((mutation) => {
+        let curTargetRow = mutation.target.closest("div[role='row']");
+        if (curTargetRow !== null && curTargetRow !== preTargetRow) {
+            preTargetRow = curTargetRow;
+            let searchPlus = curTargetRow.querySelector("svg.text-brand-orange");
+            if (searchPlus) {
+                curTargetRow.style.display = "none";
+            }
+            else {
+                curTargetRow.style.display = "flex";
+            }
+        }
+    });
+}
