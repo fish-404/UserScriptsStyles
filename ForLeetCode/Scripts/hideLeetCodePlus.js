@@ -1,29 +1,45 @@
 // ==UserScript==
 // @name         hideLeetCodePlus
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.2.1
+// @version      0.3.0
 // @description  Hide Leetcode Plus Problems
 // @author       fish-404
 // @match        https://leetcode.cn/problemset/*
+// @match        https://leetcode.cn/tag/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=leetcode.cn
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict';
-
-    const problemsNode = document.querySelector("div[role='table']");
+    const url = window.location.href;
+    let problemsNode, tagFlag, observer;
 
     const config = {
         subtree: true
         , childList: true
     };
 
-    const observer = new MutationObserver(hidePlusProblems);
-    observer.observe(problemsNode, config);
+    if (url.includes("tag")) { // problemsets with tags
+        console.log("tag: true");
+        const container = document.querySelector("div#lc-content");
+        observer = new MutationObserver(()=>{
+            let tbody = document.querySelector("tbody.ant-table-tbody");
+            if (tbody) {
+                const innerObserver = new MutationObserver(hidePlusProblemsWithTag);
+                innerObserver.observe(container, config);
+            }
+        });
+        observer.observe(container, config);
+    }
+    else {
+        problemsNode = document.querySelector("div[role='table']");
+        observer = new MutationObserver(hidePlusProblemsWithoutTag);
+        observer.observe(problemsNode, config);
+    }
 })();
 
-function hidePlusProblems(mutationList) {
+function hidePlusProblemsWithoutTag(mutationList) {
     let preTargetRow;
     mutationList.forEach((mutation) => {
         let curTargetRow = mutation.target.closest("div[role='row']");
@@ -33,6 +49,20 @@ function hidePlusProblems(mutationList) {
             console.log(mutation);
             console.log(searchPlus);
             changeElementDisplay(curTargetRow, searchPlus === null);
+        }
+    });
+}
+
+function hidePlusProblemsWithTag(mutationList) {
+    mutationList.forEach((mutation) => {
+        console.log(mutation);
+        if (mutation.addedNodes.length > 0) {
+            let curTargetRow = mutation.addedNodes[0];
+            let searchPlus = curTargetRow.querySelector("img[alt='plus']");
+            console.log(searchPlus);
+            if (searchPlus) {
+                curTargetRow.style.display = "none";
+            }
         }
     });
 }
