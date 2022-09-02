@@ -6,6 +6,7 @@
 // @author       fish-404
 // @match        https://leetcode.cn/problemset/*
 // @match        https://leetcode.cn/tag/*
+// @match        https://leetcode.cn/problem-list/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=leetcode.cn
 // @grant        none
 // ==/UserScript==
