@@ -10,6 +10,8 @@
 // @match        https://leetcode.cn/tag/*
 // @match        https://leetcode.cn/problem-list/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=leetcode.cn
+// @updateURL    https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/ForLeetCode/Scripts/hideLeetCodePlus.meta.js
+// @downloadURL  https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/ForLeetCode/Scripts/hideLeetCodePlus.user.js
 // @grant        none
 // ==/UserScript==
 
