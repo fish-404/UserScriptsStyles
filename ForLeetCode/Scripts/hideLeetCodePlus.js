@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         hideLeetCodePlus
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.4.0
+// @version      0.4.1
+// @license      MIT
 // @description  Hide Leetcode Plus Problems
+// @description:zh 隐藏 Leetcode Plus 题目
 // @author       fish-404
 // @match        https://leetcode.cn/problemset/*
 // @match        https://leetcode.cn/tag/*
