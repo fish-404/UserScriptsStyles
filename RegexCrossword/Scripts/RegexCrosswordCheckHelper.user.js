@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.2
+// @version      0.3
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -34,14 +34,15 @@ function rowRuleCheck(event) {
 
 function colRuleCheck(event) {
     let colIndex = event.target.closest('td').cellIndex;
-    console.log("colIndex", colIndex);
-    let colClueContainer = event.target.closest('table').querySelectorAll('th div.clue span')[colIndex-1];
+    let colClueContainerHead = event.target.closest('table').querySelectorAll('thead th div.clue span')[colIndex-1];
+    let colClueContainerFoot = event.target.closest('table').querySelectorAll('tfoot th div.clue span')[colIndex-1];
     let colInputs = [];
     let rows = event.target.closest('tbody').querySelectorAll('tr');
     rows.forEach((row) => {
         colInputs.push(row.querySelectorAll('td input')[colIndex-1]);
     });
-    changeTextColor(colClueContainer, colInputs, event);
+    changeTextColor(colClueContainerHead, colInputs, event);
+    changeTextColor(colClueContainerFoot, colInputs, event);
 }
 
 function regexCheck(regexExpression, strToCheck) {
