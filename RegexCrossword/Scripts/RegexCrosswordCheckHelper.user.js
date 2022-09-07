@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.5
+// @version      0.6
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -13,15 +13,15 @@
     'use strict';
     document.addEventListener("keydown", function(e) {
         e.stopPropagation();
-        if (keyCheck(e.keyCode)) {
+        if (keyCheck(e.key)) {
             handler(e);
         }
     }, true);
 
 })();
 
-function keyCheck(keyCode) {
-   return (keyCode >= 65 && keyCode <= 90);
+function keyCheck(key) {
+    return key.length === 1;
 }
 
 function handler(event) {
