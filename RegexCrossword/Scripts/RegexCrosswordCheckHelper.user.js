@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.4
+// @version      0.5
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -52,8 +52,7 @@ function colRuleCheck(event) {
 }
 
 function regexCheck(regexExpression, strToCheck) {
-    let regex = new RegExp(regexExpression, 'i');
-    return regex.test(strToCheck);
+    return new RegExp(`^${regexExpression}\$`, 'i').test(strToCheck);
 }
 
 function combineInputs(inputArr, event) {
