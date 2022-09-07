@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.1
+// @version      0.2
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -25,9 +25,11 @@ function handler(event) {
 
 function rowRuleCheck(event) {
     let row = event.target.closest('tr');
-    let rowClueContainer = row.querySelector('span');
+    let rowClueContainers = row.querySelectorAll('span');
     let rowInputs = row.querySelectorAll('td input');
-    changeTextColor(rowClueContainer, rowInputs, event);
+    rowClueContainers.forEach((container) => {
+        changeTextColor(container, rowInputs, event);
+    });
 }
 
 function colRuleCheck(event) {
