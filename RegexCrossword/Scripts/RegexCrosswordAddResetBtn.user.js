@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         addResetButton
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.1
+// @version      0.1.1
 // @description  Add a reset button for challenges and palyerpuzzles
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -15,17 +15,18 @@
 
     window.addEventListener('load', function(e) {
         e.stopPropagation();
-        addResetBtn(document.querySelector('.validate'));
+        addResetBtn();
     }, false);
 })();
 
-function addResetBtn(btn) {
+function addResetBtn() {
     console.log("Add Reset Button");
-    const resetBtn = document.importNode(btn, true);
+    const validateBtn = document.querySelector('.validate');
+    const resetBtn = document.importNode(validateBtn, true);
     console.log(resetBtn);
     resetBtn.type = "reset";
     resetBtn.textContent = "Reset";
     resetBtn.classList.remove("btn-primary");
     resetBtn.classList.add("btn-danger");
-    btn.insertAdjacentElement('afterend', resetBtn);
+    validateBtn.insertAdjacentElement('afterend', resetBtn);
 }
