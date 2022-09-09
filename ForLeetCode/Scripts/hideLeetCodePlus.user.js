@@ -34,7 +34,7 @@
             let tbody = document.querySelector("tbody.ant-table-tbody");
             if (tbody) {
                 const innerObserver = new MutationObserver(hidePlusProblemsWithTag);
-                innerObserver.observe(container, config);
+                innerObserver.observe(tbody, config);
             }
         });
         observer.observe(container, config);
