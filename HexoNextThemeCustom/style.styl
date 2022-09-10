@@ -1,0 +1,47 @@
+/* hide archive summary */
+.archive .collection-title {
+	display: none !important;
+}
+
+/* custom background pic */
+.sidebar {
+  background: url("/images/ai.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  p, span, a {color: #000000;};
+}
+
+/* change sidebar chat button color to fit the background */
+.sidebar .sidebar-button button:hover {
+  background: #000;
+}
+
+.sidebar .sidebar-button button {
+  color: #000;
+  border: 1px solid #000;
+}
+
+/* hide sticky flag */
+.post-sticky-flag {
+  display: none;
+}
+
+/* sidebar scrollbar */
+.sidebar-panel-container::-webkit-scrollbar {
+  background-color: unset;  
+  width: 11px;
+}
+
+.sidebar-panel-container::-webkit-scrollbar-thumb {
+  background-color: lightcyan;  
+}
+
+.sidebar-panel-container::-webkit-scrollbar-corner {
+  background-color: lightpink;  
+}
+
+.sidebar-panel-container::-webkit-scrollbar-track {
+  --webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.5); 
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.5);
+}
