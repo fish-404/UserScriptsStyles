@@ -15,8 +15,11 @@
 (function() {
     'use strict';
     try { 
+        // Sticky TOC 
         document.getElementById("affixed-right-container").setAttribute("style", "position: sticky; top: 3vh");
         document.getElementById("right-rail-in-this-article-list").setAttribute("style", "overflow: auto; max-height: 70vh;");
+
+        // Click Show More Button Default
         document.querySelector("button[data-bi-name='show-more-btn']").click();
         document.querySelector('#right-rail-in-this-article-list .is-expanded a').setAttribute("style", "outline: 0"); // remove dash border
     }
