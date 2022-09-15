@@ -24,7 +24,7 @@
         document.querySelector('#right-rail-in-this-article-list .is-expanded a').setAttribute("style", "outline: 0"); // remove dash border
 
         // Move Add Collection Button to TOC
-        document.querySelector('div[data-bi-name="right-column" article div')
+        document.querySelector('div[data-bi-name="right-column"] article div')
             .insertAdjacentElement('beforeend', document.querySelector('button[data-bi-name="collection"]'));
     }
     catch {} // not all page has right sidebar TOC block
