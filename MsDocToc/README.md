@@ -25,5 +25,6 @@ You can choose install styles [![Install directly with Stylus](https://img.shiel
 * Sticky the toc
 * Scroll the toc when the toc is long (e.g. [Visual Studio 2017 15.9 Release Notes|Microsoft Docs](https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes))
 * Click "Show More" default (only support when you install by scripts)
+* Add "+"(Add Collection) button to TOC (only support wehn you install by scripts)
 
 ![Preview](https://user-images.githubusercontent.com/29678177/168439125-4de6be44-afb6-47ce-b6a4-ac6e12983bfa.png)
