@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name           MsDocToc
 @namespace      mailto: fish404hsif@gmail.com
-@version        0.1.0
+@version        0.1.1
 @description    Sticky Microsoft Docs TOC 
 @author         fish-404
 @license        MIT
 @updateURL      https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/MsDocToc/Styles/StylesMsDocToc.user.css
 ==/UserStyle== */
-@-moz-document domain("docs.microsoft.com") {
+@-moz-document domain("docs.microsoft.com"), domain("learn.microsoft.com") {
     .is-vertically-scrollable {
         position: sticky;
         top: 3vh;
