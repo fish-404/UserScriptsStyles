@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.6
+// @version      0.6.1
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -70,10 +70,18 @@ function combineInputs(inputArr, event) {
 
 function changeTextColor(clueContainer, inputs, event)
 {
-    if (regexCheck(clueContainer.getAttribute('title'), combineInputs(inputs, event))) {
-        clueContainer.style.color = "green";
+    let clue = clueContainer.getAttribute('title');
+    if (clue !== null && clue !== "") {
+        if (regexCheck(clue, combineInputs(inputs, event))) {
+            setTextColor(clueContainer, "green");
+        }
+        else {
+            setTextColor(clueContainer, "red");
+        }
     }
-    else {
-        clueContainer.style.color = "red";
-    }
+}
+
+function setTextColor(container, color)
+{
+    container.style.color = color;
 }
