@@ -1,0 +1,5 @@
+@-moz-document domain("getpocket.com") {
+    article {
+        max-width: 50vw !important;
+    }
+}
