@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.6.1
+// @version      0.7.0
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -13,7 +13,7 @@
     'use strict';
     document.addEventListener("keydown", function(e) {
         e.stopPropagation();
-        if (keyCheck(e.key)) {
+        if (keyCheck(e.key) || e.key === 'Backspace') {
             handler(e);
         }
     }, true);
@@ -21,6 +21,7 @@
 })();
 
 function keyCheck(key) {
+    console.log(key.length);
     return key.length === 1;
 }
 
@@ -59,7 +60,12 @@ function combineInputs(inputArr, event) {
     let inputChars = [];
     inputArr.forEach((singleInput) => {
         if (singleInput === event.target) {
-            inputChars.push(event.key);
+            if (event.key === 'Backspace') {
+                inputChars.push('');
+            }
+            else {
+                inputChars.push(event.key);
+            }
         }
         else {
             inputChars.push(singleInput.value);
