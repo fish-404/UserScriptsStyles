@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.7.2
+// @version      0.7.3
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -38,25 +38,32 @@ function handler(event) {
 }
 
 function rowRuleCheck(event) {
-    let row = document.querySelector('tr.highlight');
-    let rowClueContainers = row.querySelectorAll('.clue');
-    let rowInputs = row.querySelectorAll('td input');
-    rowClueContainers.forEach((container) => {
-        changeTextColor(container, rowInputs, event);
-    });
+    cluesCheck(
+        document.querySelectorAll('tr.highlight th.clue span')
+        , document.querySelectorAll('tr.highlight td input')
+        , event
+    );
 }
 
 function colRuleCheck(event) {
     let colIndex = event.target.closest('td').cellIndex;
-    let colClueContainerHead = event.target.closest('table').querySelectorAll('thead th div.clue span')[colIndex-1];
-    let colClueContainerFoot = event.target.closest('table').querySelectorAll('tfoot th div.clue span')[colIndex-1];
     let colInputs = [];
     let rows = event.target.closest('tbody').querySelectorAll('tr');
     rows.forEach((row) => {
         colInputs.push(row.querySelectorAll('td input')[colIndex-1]);
     });
-    changeTextColor(colClueContainerHead, colInputs, event);
-    changeTextColor(colClueContainerFoot, colInputs, event);
+
+    cluesCheck(
+        document.querySelectorAll('th.highlight div.clue span')
+        , colInputs
+        , event
+    );
+}
+
+function cluesCheck(containers, inputs, event) {
+    containers.forEach((container) => {
+        changeTextColor(container, inputs, event);
+    });
 }
 
 function regexCheck(regexExpression, strToCheck) {
@@ -81,8 +88,7 @@ function combineInputs(inputArr, event) {
     return inputChars.join('');
 }
 
-function changeTextColor(clueContainer, inputs, event)
-{
+function changeTextColor(clueContainer, inputs, event) {
     let clue = clueContainer.getAttribute('title');
     if (clue !== null && clue !== "") {
         if (regexCheck(clue, combineInputs(inputs, event))) {
@@ -94,8 +100,7 @@ function changeTextColor(clueContainer, inputs, event)
     }
 }
 
-function setTextColor(container, color)
-{
+function setTextColor(container, color) {
     container.style.color = color;
 }
 
