@@ -47,15 +47,10 @@ function rowRuleCheck(event) {
 
 function colRuleCheck(event) {
     let colIndex = event.target.closest('td').cellIndex;
-    let colInputs = [];
-    let rows = event.target.closest('tbody').querySelectorAll('tr');
-    rows.forEach((row) => {
-        colInputs.push(row.querySelectorAll('td input')[colIndex-1]);
-    });
 
     cluesCheck(
         document.querySelectorAll('th.highlight div.clue span')
-        , colInputs
+        , document.querySelectorAll(`tbody tr td:nth-child(${colIndex+1}) input`)
         , event
     );
 }
