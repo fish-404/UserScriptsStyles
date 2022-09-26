@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.7.1
+// @version      0.7.2
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
@@ -38,8 +38,8 @@ function handler(event) {
 }
 
 function rowRuleCheck(event) {
-    let row = event.target.closest('tr');
-    let rowClueContainers = row.querySelectorAll('span');
+    let row = document.querySelector('tr.highlight');
+    let rowClueContainers = row.querySelectorAll('.clue');
     let rowInputs = row.querySelectorAll('td input');
     rowClueContainers.forEach((container) => {
         changeTextColor(container, rowInputs, event);
