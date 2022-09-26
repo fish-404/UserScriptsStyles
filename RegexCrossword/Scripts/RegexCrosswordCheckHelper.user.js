@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         RegexCrosswordHelper
 // @namespace    mailto: fish404hsif@gmail.com
-// @version      0.7.3
+// @version      0.7.4
 // @description  Regex Crossword input check helper
 // @author       fish-404
 // @match        https://regexcrossword.com/challenges/*
+// @match        https://regexcrossword.com/playerpuzzles/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=regexcrossword.com
 // @grant        none
 // ==/UserScript==
