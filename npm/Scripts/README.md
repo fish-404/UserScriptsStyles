@@ -29,9 +29,10 @@ According to Github API document[^1]:
 
 > For unauthenticated requests, the rate limit allows for up to 60 requests per hour. Unauthenticated requests are associated with the originating IP address, and not the person making requests.
 
-# Known Issues to Fix
+# Known Issues to Fix & Todo
 
-When you nagtive to other package from the search suggestion result as your current location is a package detail page, the badge will not changed. (Issue #8)
+* When you nagtive to other package from the search suggestion result as your current location is a package detail page, the badge will not changed. (Issue #8)
+* Add indicate when API request fail
 
 # Background
 
