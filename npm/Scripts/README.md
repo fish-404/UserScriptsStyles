@@ -17,7 +17,7 @@ Add a badge icon to show the npm package forks info:
 
 To use this script, you need to allow cross-origin, Tampermonkey will pop a page like this:
 
-![screenshot about cross-origin request](https://user-images.githubusercontent.com/29678177/192422680-9f898d69-6bd0-4a57-b4aa-d3c902414165.png)
+![screenshot about cross-origin request](https://user-images.githubusercontent.com/29678177/192424268-3d2ab850-a35d-43b1-82c4-129a8ff46d63.png)
 
 You can always remove or update the settings in script setting tab if you want.
 
