@@ -37,5 +37,6 @@ When you nagtive to other package from the search suggestion result as your curr
 
 When I search npm packages, find some packages are forked from other repo, and doesn't put infomation to indicate but is pulished to public. I know some forks repo maybe add more featrue based on the original package, but I think is confused if there is nothing to indicate this and also doesn't respcet the original developer, since the packages published to npm and we can't see the info like we see the fork repo in Github. 
 
+Thanks [Badgen](https://badgen.net/) to easily generate the badges.
 
 [^1]: [Rate Limiting from Resources in the REST API - Gihub Docs](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)
