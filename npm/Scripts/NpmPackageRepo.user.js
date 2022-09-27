@@ -8,6 +8,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=npmjs.com
 // @updateURL    https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/npm/Scripts/NpmPackageRepo.meta.js
 // @downloadURL  https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/npm/Scripts/NpmPackageRepo.user.js
+// @homepage     https://github.com/fish-404/UserScriptsStyles/tree/main/npm/Scripts
 // @license      MIT
 // @grant        GM.xmlHttpRequest
 // ==/UserScript==
