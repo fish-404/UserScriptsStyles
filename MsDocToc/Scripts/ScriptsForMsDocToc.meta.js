@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ScriptsForMsDocToc
 // @namespace    mailto:fish404hsif@gmail.com
-// @version      0.6.1
+// @version      0.7.0
 // @license      MIT
 // @description  MSDN TOC Enhance
 // @description:zh 微软文档目录功能新增
