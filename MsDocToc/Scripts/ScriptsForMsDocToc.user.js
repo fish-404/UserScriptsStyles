@@ -21,9 +21,7 @@
 })();
 
 function logError(exception, customMsg) {
-    console.error(customMsg);
-    console.error(exception.name);
-    console.error(exception.message);
+    console.error(`${customMsg} \n ${exception.name}: ${exception.message}`);
 }
 
 function setTocContainerSticky() {
