@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         ScriptsForMsDocToc
 // @namespace    mailto:fish404hsif@gmail.com
-// @version      0.7.0
+// @version      0.7.1
 // @license      MIT
 // @description  MSDN TOC Enhance
 // @description:zh 微软文档目录功能新增
 // @author       fish-404
+// @run-at       document-idle
 // @updateURL    https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/MsDocToc/Scripts/ScriptsForMsDocToc.meta.js
 // @downloadURL  https://raw.githubusercontent.com/fish-404/UserScriptsStyles/main/MsDocToc/Scripts/ScriptsForMsDocToc.user.js
-// @match        *://docs.microsoft.com/*
 // @match        *://learn.microsoft.com/*
 // @grant        none
 // ==/UserScript==
@@ -35,7 +35,7 @@ function setTocContainerSticky() {
 
 function clickShowMoreBtn() {
     try {
-        document.querySelector("button[data-bi-name='show-more-btn']").click();
+        document.querySelector("#affixed-right-container .show-more-text").parentElement.click();
     }
     catch (e) {
         logError(e, "Error: click show more button failed!");
